@@ -14,6 +14,7 @@ import java.util.Arrays;
  */
 @WebServlet(name = "requestParamServlet", urlPatterns = "/request-param")
 public class RequestParamServlet extends HttpServlet {
+    /* request.getParameter() 는 get/post 모두 지원함 */
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         StringBuilder result = new StringBuilder();
