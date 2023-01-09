@@ -1,8 +1,6 @@
 package hello.servlet.basic.request.data;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 /**
  * javaBean 접근방법
@@ -12,7 +10,14 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString(of = {"username", "age"})
+@NoArgsConstructor
 public class HelloData {
     private String username;
     private Integer age;
+
+    @Builder
+    private HelloData(String username, Integer age) {
+        this.username = username;
+        this.age = age;
+    }
 }
