@@ -93,7 +93,7 @@ public class FrontControllerServletV2Test {
 
         //when
         request.setRequestURI(prefixUri + "/not-exists-uri");
-        new FrontControllerServletV1().service(request, response);
+        new FrontControllerServletV2().service(request, response);
 
         //then
         assertThat(response.getStatus()).isEqualTo(HttpServletResponse.SC_NOT_FOUND);
