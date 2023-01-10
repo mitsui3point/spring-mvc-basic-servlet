@@ -33,7 +33,7 @@ public class RequestBodyServletTest {
     @Test
     void serviceTest() throws IOException, ServletException {
         //given
-//        String jsonString = "{\"username\":\"hello\"}";
+        //String jsonString = "{\"username\":\"hello\"}";
         String stringBody = "hello";
         request.setContent(stringBody.getBytes(StandardCharsets.UTF_8));
 

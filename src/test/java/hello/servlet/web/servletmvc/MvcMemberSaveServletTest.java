@@ -1,6 +1,8 @@
 package hello.servlet.web.servletmvc;
 
 import hello.servlet.domain.Member;
+import hello.servlet.repository.MemberRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -17,6 +19,8 @@ public class MvcMemberSaveServletTest {
 
     private MockHttpServletRequest request;
     private MockHttpServletResponse response;
+
+    private MemberRepository memberRepository = MemberRepository.getInstance();
 
     @BeforeEach
     void setUp() {
@@ -39,5 +43,10 @@ public class MvcMemberSaveServletTest {
         assertThat(actualMember).isInstanceOf(Member.class);
         assertThat(actualMember).extracting("username").isEqualTo("hello");
         assertThat(actualMember).extracting("age").isEqualTo(20);
+    }
+
+    @AfterEach
+    void tearDown() {
+        memberRepository.clear();
     }
 }

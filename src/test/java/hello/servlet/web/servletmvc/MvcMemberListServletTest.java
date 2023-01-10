@@ -2,6 +2,7 @@ package hello.servlet.web.servletmvc;
 
 import hello.servlet.domain.Member;
 import hello.servlet.repository.MemberRepository;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -41,5 +42,10 @@ public class MvcMemberListServletTest {
         //then
         assertThat(actual).isEqualTo(expected);
         assertThat(actualMembers).containsExactly(expectedMembers);
+    }
+
+    @AfterEach
+    void tearDown() {
+        memberRepository.clear();
     }
 }
