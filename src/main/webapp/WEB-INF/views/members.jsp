@@ -7,6 +7,7 @@
     <title>Title</title>
 </head>
 <body>
+<a href="/index.html">메인</a>
 <table>
     <thead>
     <th>id</th>
