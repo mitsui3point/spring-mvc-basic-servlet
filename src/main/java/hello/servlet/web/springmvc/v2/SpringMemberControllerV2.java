@@ -10,6 +10,10 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * 클래스 단위 -> 메서드 단위<br>
+ * {@link RequestMapping}클래스 레벨과 메서드 레벨 조합
+ */
 @Controller
 @RequestMapping("/springmvc/v2/members")
 public class SpringMemberControllerV2 {
