@@ -21,7 +21,7 @@ public class SpringMemberControllerV2 {
     }
 
     @RequestMapping("/save")
-    public ModelAndView process(HttpServletRequest request, HttpServletResponse response) {
+    public ModelAndView save(HttpServletRequest request, HttpServletResponse response) {
         ModelAndView mv = new ModelAndView("save-result");
         mv.addObject("member", memberRepository.save(
                 Member.builder()

@@ -14,6 +14,7 @@ import org.springframework.web.context.WebApplicationContext;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -40,8 +41,7 @@ public class SpringMemberListControllerV1Test {
                 memberRepository.save(Member.builder().username("hello2").age(21).build())
         );
         //when
-        ResultActions perform = mvc.perform(
-                post("/springmvc/v1/members"));
+        ResultActions perform = mvc.perform(get("/springmvc/v1/members"));
 
         //then
         perform.andDo(print())

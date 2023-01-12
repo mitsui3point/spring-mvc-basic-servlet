@@ -74,7 +74,7 @@ public class SpringMemberControllerV2Test {
                 memberRepository.save(Member.builder().username("hello2").age(21).build())
         );
         //when
-        ResultActions perform = mvc.perform(post("/springmvc/v2/members"));
+        ResultActions perform = mvc.perform(get("/springmvc/v2/members"));
 
         //then
         perform.andDo(print())
