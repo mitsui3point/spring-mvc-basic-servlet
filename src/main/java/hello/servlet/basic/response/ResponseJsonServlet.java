@@ -3,7 +3,6 @@ package hello.servlet.basic.response;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.exc.MismatchedInputException;
 import hello.servlet.basic.request.data.HelloData;
-import org.springframework.util.StringUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.ServletInputStream;

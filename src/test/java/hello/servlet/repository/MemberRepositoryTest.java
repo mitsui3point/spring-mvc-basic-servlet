@@ -1,7 +1,6 @@
 package hello.servlet.repository;
 
 import hello.servlet.domain.Member;
-import hello.servlet.repository.MemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 

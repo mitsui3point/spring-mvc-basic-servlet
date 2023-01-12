@@ -1,7 +1,5 @@
 package hello.servlet.web.servlet;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import hello.servlet.domain.Member;
 import hello.servlet.repository.MemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
